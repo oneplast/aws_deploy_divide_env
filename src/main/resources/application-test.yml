@@ -4,4 +4,4 @@ spring:
 
 custom:
   genFile:
-    dirPath: c:/infra_practice/aws/temp/glog_temp
+    dirPath: "${user.home}/infra_practice/aws/temp/glog_temp"

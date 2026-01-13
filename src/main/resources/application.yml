@@ -105,4 +105,4 @@ custom:
   accessToken:
     expirationSeconds: "#{60 * 20}"
   genFile:
-    dirPath: c:/infra_practice/aws/temp/glog_temp
+    dirPath: "${user.home}/infra_practice/aws/temp/glog_temp"
