@@ -1,4 +1,10 @@
 spring:
+  data:
+    redis:
+      port: 6379
+      host: redis_1
+      password: ${custom.prod.redis.password}
+
   datasource:
     url: jdbc:mysql://mysql_1:3306/glog_prod
     username: oneplocal

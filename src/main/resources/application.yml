@@ -13,6 +13,10 @@ spring:
     active: dev
     include: secret
 
+  data:
+    redis:
+      port: 36379
+
   servlet:
     multipart:
       max-file-size: ${spring.servlet.multipart.max-request-size}

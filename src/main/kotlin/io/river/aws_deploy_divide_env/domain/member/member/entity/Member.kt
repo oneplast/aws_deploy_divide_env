@@ -1,0 +1,16 @@
+package io.river.aws_deploy_divide_env.domain.member.member.entity
+
+import io.river.aws_deploy_divide_env.global.jpa.entity.BaseTime
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+
+@Entity
+class Member(
+
+    @Column(unique = true, length = 60)
+    var username: String,
+    @Column(length = 65)
+    var password: String,
+    @Column(length = 30)
+    var nickname: String
+) : BaseTime()
