@@ -80,6 +80,8 @@ jobs:
         with:
           context: .
           push: true
+          cache-from: type=registry,ref=ghcr.io/${{ needs.ownerToLowercase.outputs.owner_lc }}/${{ env.DOCKER_IMAGE_NAME }}:cache # GITHUB ACTIONS에서 도커 빌드 시 캐시 사용 설정
+          cache-to: type=registry,ref=ghcr.io/${{ needs.ownerToLowercase.outputs.owner_lc }}/${{ env.DOCKER_IMAGE_NAME }}:cache,mode=max # GITHUB ACTIONS에서 도커 빌드 시 캐시 사용 설정
           tags: |
             ghcr.io/${{ needs.ownerToLowercase.outputs.owner_lc }}/${{ env.DOCKER_IMAGE_NAME }}:${{ needs.makeTagAndRelease.outputs.tag_name }}
             ghcr.io/${{ needs.ownerToLowercase.outputs.owner_lc }}/${{ env.DOCKER_IMAGE_NAME }}:latest
