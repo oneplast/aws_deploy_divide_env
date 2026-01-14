@@ -110,5 +110,5 @@ jobs:
             
             docker pull "$IMAGE"
             docker rm -f app1 || true
-            docker run -d --name app1 -p 8080:8080 "$IMAGE"
+            docker run -d --network common --name app1 -p 8080:8080 "$IMAGE"
             docker image prune -f
