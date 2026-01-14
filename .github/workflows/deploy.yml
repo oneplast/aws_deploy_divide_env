@@ -54,7 +54,7 @@ jobs:
     needs: [ownerToLowercase, makeTagAndRelease]
     runs-on: ubuntu-latest
     env:
-      DOCKER_IMAGE_NAME: awsServices
+      DOCKER_IMAGE_NAME: aws_multi_env
     outputs:
       DOCKER_IMAGE_NAME: ${{ env.DOCKER_IMAGE_NAME }}
     steps:
