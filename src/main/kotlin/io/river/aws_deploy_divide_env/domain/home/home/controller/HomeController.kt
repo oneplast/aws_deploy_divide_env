@@ -10,5 +10,5 @@ class HomeController(
 ) {
 
     @GetMapping("/")
-    fun main() = "회원 수 : ${memberService.count()}"
+    fun main() = "회원 수 : ${memberService.count()}명"
 }
